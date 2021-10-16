@@ -1,32 +1,41 @@
 package CaseStudy.models;
 
-public class Person {
-    private String hoten;
-    private int ngaysinh;
+public abstract class Person {
+    private String fullName;
+    private String birthDay;
     private String gender;
-    private int cmnd;
-    private int sdt;
-    private String email;
     private String address;
+    private String idNumber;
+    private String phoneNumber;
+    private String email;
 
-    public Person(String hoten, String ngaysinh, String gender, int cmnd, int sdt, String email) {
+    public Person() {
     }
 
-
-    public String getHoten() {
-        return hoten;
+    public Person(String fullName, String birthDay, String gender, String address, String idNumber, String phoneNumber, String email) {
+        this.fullName = fullName;
+        this.birthDay = birthDay;
+        this.gender = gender;
+        this.address = address;
+        this.idNumber = idNumber;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
     }
 
-    public void setHoten(String hoten) {
-        this.hoten = hoten;
+    public String getFullName() {
+        return fullName;
     }
 
-    public int getNgaysinh() {
-        return ngaysinh;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public void setNgaysinh(int ngaysinh) {
-        this.ngaysinh = ngaysinh;
+    public String getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(String birthDay) {
+        this.birthDay = birthDay;
     }
 
     public String getGender() {
@@ -37,20 +46,28 @@ public class Person {
         this.gender = gender;
     }
 
-    public int getCmnd() {
-        return cmnd;
+    public String getAddress() {
+        return address;
     }
 
-    public void setCmnd(int cmnd) {
-        this.cmnd = cmnd;
+    public String getIdNumber() {
+        return idNumber;
     }
 
-    public int getSdt() {
-        return sdt;
+    public void setIdNumber(String idNumber) {
+        this.idNumber = idNumber;
     }
 
-    public void setSdt(int sdt) {
-        this.sdt = sdt;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
@@ -61,11 +78,19 @@ public class Person {
         this.email = email;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    @Override
+    public String toString() {
+        return
+                "fullName='" + fullName + '\'' +
+                ", birthDay='" + birthDay + '\'' +
+                ", gender='" + gender + '\'' +
+                ", address='" + address + '\'' +
+                ", IdNumber='" + idNumber + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' ;
     }
 }
+   
+
+
+
